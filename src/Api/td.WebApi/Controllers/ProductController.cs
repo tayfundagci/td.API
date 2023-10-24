@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using td.Application.Dto;
 using td.Application.Features.Products.Commands;
@@ -15,7 +16,7 @@ namespace td.WebApi.Controllers
     public class ProductController : ApiControllerBase
     {
 
-        [Authorize(enmRole.Admin)]
+        [AllowAnonymous]
         [Route("list")]
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<ProductDto>>>> List(GetAllProductsQuery query)

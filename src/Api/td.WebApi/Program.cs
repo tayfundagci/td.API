@@ -5,6 +5,7 @@ using td.Persistence;
 using td.Persistence.Migrations.Tables;
 using td.Persistence.Services;
 using td.Shared;
+using td.WebApi.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,10 @@ builder.Services.AddFluentMigratorCore()
                     .WithGlobalConnectionString(builder.Configuration.GetConnectionString("SqlConnection"))
                     .WithMigrationsIn(typeof(ProductTableMigration).Assembly));
 
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<ExceptionFilter>();
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
