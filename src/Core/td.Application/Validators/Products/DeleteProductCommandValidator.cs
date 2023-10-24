@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using td.Application.Features.Products.Queries;
-using td.Application.Features.Users.Queries;
+using td.Application.Features.Products.Commands;
 
 namespace td.Application.Validators.Products
 {
-    public class GetProductByIdValidator : AbstractValidator<GetProductQuery>
+    public class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
     {
-        public GetProductByIdValidator()
+        public DeleteProductCommandValidator()
         {
             RuleFor(p => p.Id)
                 .NotEmpty().WithMessage("Product {PropertyName} is required.")

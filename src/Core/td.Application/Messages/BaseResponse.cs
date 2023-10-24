@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace td.Application.Wrappers
+namespace td.Application.Messages
 {
     public class BaseResponse
     {
@@ -19,7 +19,7 @@ namespace td.Application.Wrappers
 
         public BaseResponse()
         {
-            
+
         }
     }
 }

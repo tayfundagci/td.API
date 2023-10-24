@@ -5,7 +5,6 @@ using System.Net;
 using System.Security.Authentication;
 using td.Application.Exceptions;
 using td.Application.Messages;
-using td.Application.Wrappers;
 
 namespace td.WebApi.Filters
 {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using td.Application.Dto;
 
-namespace td.Application.Wrappers.Users
+namespace td.Application.Messages.Users
 {
     public class UserLoginResponse
     {

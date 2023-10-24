@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using td.Application.Dto;
 using td.Application.Interfaces;
-using td.Application.Wrappers;
-using td.Application.Wrappers.Users;
+using td.Application.Messages;
+using td.Application.Messages.Users;
 
 namespace td.Application.Features.Users.Queries
 {
