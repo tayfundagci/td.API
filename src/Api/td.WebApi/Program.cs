@@ -23,11 +23,6 @@ builder.Services.AddFluentMigratorCore()
                     .ConfigureRunner(
                     migrationBuilder => migrationBuilder
                     .AddSqlServer()
-                    //.ConfigureGlobalProcessorOptions(opt =>
-                    //{
-                    //    opt.ProviderSwitches = "Force Quote=false";
-                    //    opt.ProviderSwitches = "Enable Legacy Timestamp Behavior=true";
-                    //})
                     .WithGlobalConnectionString(builder.Configuration.GetConnectionString("SqlConnection"))
                     .WithMigrationsIn(typeof(ProductTableMigration).Assembly));
 
